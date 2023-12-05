@@ -1,0 +1,4 @@
+[theme]
+base="dark"
+backgroundColor="#000000"
+override_plotly_theme = false
