@@ -79,7 +79,7 @@ if 'show_description' not in st.session_state:
 def load_data():
     nlp = spacy.load("en_core_web_sm")
     df = pd.read_parquet('df_french_2.parquet.gzip')
-    X = pd.read_pickle('Xbiais.p')
+    X = pd.read_parquet('Xbiais.parquet.gzip')
     return(nlp, df , X)
 nlp, df, X = load_data()
 
