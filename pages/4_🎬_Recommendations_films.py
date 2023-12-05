@@ -12,7 +12,7 @@ import timeit
 #import concurrent.futures
 from deep_translator import GoogleTranslator
 import urllib.request 
-import spacy_streamlit
+#import spacy_streamlit
 st.set_page_config(
     page_title="Recommandation de films",
     page_icon="🎬",
@@ -77,11 +77,11 @@ if 'show_description' not in st.session_state:
 
 @st.cache_data
 def load_data():
-    nlp = spacy.load("en_core_web_sm")
+    #nlp = spacy.load("en_core_web_sm")
     df = pd.read_parquet('df_french_2.parquet.gzip')
     X = pd.read_parquet('Xbiais.parquet.gzip')
     return(nlp, df , X)
-nlp, df, X = load_data()
+df, X = load_data()
 
 # We train the model
 @st.cache_resource
