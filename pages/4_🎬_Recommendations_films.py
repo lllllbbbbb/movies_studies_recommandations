@@ -12,7 +12,7 @@ import timeit
 #import concurrent.futures
 from deep_translator import GoogleTranslator
 import urllib.request 
-
+import spacy_streamlit
 st.set_page_config(
     page_title="Recommandation de films",
     page_icon="🎬",
